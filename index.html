@@ -1,7 +1,138 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emper</title>
-<link rel="icon" href="https://i.imgur.com/9TAtXqB.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>商品紹介 | 株式会社Emper</title>
+
+  <!-- 🔹 OGP設定 -->
+  <meta property="og:title" content="株式会社Emper | 商品紹介" />
+  <meta property="og:description" content="株式会社Emperが開発する最新のITプロダクトをご紹介します。" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Emper+Products" />
+  <meta property="og:url" content="https://emper.co.jp/products.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #fff; color: #333; }
+
+    header {
+      position: fixed; top: 0; left: 0; width: 100%;
+      background: rgba(255,255,255,0.9);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 5%; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    header h1 { font-size: 20px; font-weight: bold; color: #0078ff; }
+    nav a {
+      margin-left: 20px; text-decoration: none; color: #333; font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #0078ff; }
+
+    main { padding: 100px 10% 60px; max-width: 1200px; margin: auto; }
+
+    h2 { font-size: 30px; color: #0078ff; text-align: center; margin-bottom: 40px; }
+
+    /* 商品カード */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: #f9fbff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .product-card img {
+      width: 100%; height: 180px; object-fit: cover;
+    }
+    .product-info { padding: 15px; }
+    .product-info h3 { color: #0078ff; margin-bottom: 8px; }
+    .product-info p { font-size: 15px; line-height: 1.6; }
+    .product-info a {
+      display: inline-block; margin-top: 10px; color: white; background: #0078ff;
+      padding: 8px 16px; border-radius: 6px; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .product-info a:hover { background: #005fcc; }
+
+    footer {
+      text-align: center; background: #0078ff; color: white;
+      padding: 20px; font-size: 14px; margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav a { display: inline-block; margin: 8px 10px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔹 ヘッダー -->
+  <header>
+    <h1>株式会社Emper</h1>
+    <nav>
+      <a href="index.html#top">トップ</a>
+      <a href="index.html#about">会社概要</a>
+      <a href="index.html#services">サービス</a>
+      <a href="products.html">商品紹介</a>
+      <a href="index.html#contact">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <!-- 🔹 メイン -->
+  <main>
+    <h2>商品紹介</h2>
+
+    <div class="products">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x200.png?text=Emper+AI+Suite" alt="Emper AI Suite">
+        <div class="product-info">
+          <h3>Emper AI Suite</h3>
+          <p>AI技術を活用した業務支援ツール。自動分析・レポート生成・画像認識などを一括管理できます。</p>
+          <a href="#">詳細を見る</a>
+        </div>
+      </div>
+
+     <div class="product-card">
+        <img src="https://via.placeholder.com/400x200.png?text=Emper+Cloud" alt="Emper Cloud">
+        <div class="product-info">
+          <h3>EM Cloud</h3>
+          <p>100GBプランから最大24TBプランまで様々</p>
+          <a href="#">詳細を見る</a>
+        </div>
+      </div>
+
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x200.png?text=Emper+Cloud" alt="Emper Cloud">
+        <div class="product-info">
+          <h3>Emper Cloud</h3>
+          <p>クラウド型開発環境。開発からデプロイまでをワンクリックで行える新世代のIT基盤です。</p>
+          <a href="#">詳細を見る</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x200.png?text=Emper+Secure" alt="Emper Secure">
+        <div class="product-info">
+          <h3>Emper Secure</h3>
+          <p>企業向けセキュリティパッケージ。データ暗号化・アクセス制御・AI検知などを統合管理。</p>
+          <a href="#">詳細を見る</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 🔹 フッター -->
+  <footer>
+    © 2025 株式会社Emper All Rights Reserved.
+  </footer>
+</body>
+</html>
